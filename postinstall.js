@@ -239,8 +239,8 @@ console.log("Downloading " + title + " runtime libraries - version " + vrmf);
 
 // Define the file to be downloaded (it will be deleted later, after unpacking)
 var url = protocol + host + "/" + dir + "/" + file;
-if (process.env['MQIJS_LOCALURL'] != null) {
-  url = "http://localhost:8000/"+file; // My local version for testing this script
+if (process.env['MQIJS_LOCAL_URL'] != null) {
+  url = process.env['MQIJS_LOCAL_URL']+file
 }
 console.log("Getting " + url);
 
